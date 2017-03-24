@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-// import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>WTF Project</h1>
-      </div>
-    );
-  }
-}
+import Main from './containers/Main.js';
+import Nav from './components/Nav.js'
+
+
+const App = () => (
+  <Router>
+    <div>
+      <Nav/>
+      <Route path="/" component={Main}/>
+    </div>
+  </Router>
+)
 
 export default App;
